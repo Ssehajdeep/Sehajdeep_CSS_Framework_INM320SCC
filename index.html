@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SehajCssFramework</title>
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css">
+
+    <!-- Bootstrap Linked -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+
+    <!-- Stylesheet Linked -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- left side of the dashboard -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="sidebar col-12 col-lg-2"> <!-- Need a nav to recreate the sidebar look for naivgating -->
+                <strong class="navT1"><img src="/images/navT1Icon.svg" alt="" width="25" height="30">PURITY UI DASHBOARD</strong> <!-- Tag that lets the word stand out more than regular -->
+                <ul> <!-- need to use unordered list -->
+                    <li><a href="index.html">
+                        <img class="homeIcon" src="/images/home.svg" alt="" width="20" height="25"> <!--REMINDER GOTT TO ADD ALT -->
+                        Dashboard
+                        </a>
+                    </li>
+                
+                    <li><a href=""><img src="/images/chart.svg" alt="" width="20" height="25">Tables</a></li> <!--REMINDER GOTT TO ADD ALT -->
+                    <li><a href=""><img src="/images/wallet.svg" alt="" width="20" height="25">Billing</a></li> <!--REMINDER GOTT TO ADD ALT -->
+                    <li><a href=""><img src="/images/sett.svg" alt="" width="20" height="25">RTL</a></li> <!--REMINDER GOTT TO ADD ALT -->
+                </ul>
+                
+                <p>ACCOUNT PAGES</p>
+                <ul>
+                    <li><a href=""><img src="/images/person.svg" alt="" width="20" height="25">Profile</a></li>
+                    <li><a href=""><img src="/images/document.svg" alt="" width="20" height="25">Sign In</a></li>
+                    <li><a href=""><img src="/images/rocket.svg" alt="" width="20" height="25">Sign Up</a></li>
+                </ul>
+            </nav>
+      
+            <!-- Need to use main since it will allow bootstrap porperty to detect this entire block as a column allowing me to move freely -->
+            <main class="col-lg-10"> <!-- col-lg-10 will take 10 columns leaving the reset 2 out of 12 for the left sidebar navigation -->
+                <!-- title of the main page -->
+                <header class="dHead">
+                    <div>
+                        <p class="pageAddress"><span class="t1C">Pages</span> / Dashboard</p>
+                        <h1 class="title">Dashboard</h1>
+                    </div>
+
+                    <!-- Need to add a search box -->
+                    <div class="headerTools">
+                        <input type="search" class="searchIcon" placeholder="Type here..." aria-label="Search dashboard">
+
+                        <!-- For the right side beside the search box -->
+                        <span class="tt"><img src="/images/default.svg" alt="" width="20" height="20">Sign In</span>
+
+                        <img src="/images/sharp.svg" alt="Settings" width="20" height="20">
+                        <img src="images/noti.svg" alt="Notifications" width="20" height="20">
+                    </div>
+                </header>
+
+                <!-- ------------------ Stats below the heading -------------------- -->
+                <div class="row stats">
+                    <!-- col-12 - takes full width of the row (when minimized) 
+                        col-md-6 - takes half width of the row (when minimized)
+                        col-lg-3 - takes quater width of the row (when minimized)-->
+                    
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card statsText boxDesign1 flex-row justify-content-between align-items-center"> 
+                            <div>
+                                <span class="boxText1">Today’s Money</span>
+                                <br> <!-- used to tell html to satrt the next on different line (like pressing enter key)-->
+                                <strong class="boxTextP2">$53,000</strong>
+                                <span class="text-success fw-bold small">+55%</span>
+                            </div>
+                            <img src="/images/IconBox1.svg" alt="" width="40" height="50">  <!--GOT TO WRITE ALT DONT FORGET REMINDER FOR ME-->     
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card statsText boxDesign1 flex-row justify-content-between align-items-center">
+                            <div>
+                                <span class="boxText1">Today’s Users</span>
+                                <br>
+                                <strong class="boxTextP2">2,300</strong>
+                                <span class="text-success fw-bold small">+5%</span>
+                            </div>
+                            <img src="/images/IconBox2.svg" alt="" width="40" height="50">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card statsText boxDesign1 flex-row justify-content-between align-items-center">
+                            <div>
+                                <span class="boxText1">New Clients</span>
+                                <br>
+                                <strong class="boxTextP2">+3,052</strong>
+                                <span class="text-success fw-bold small">-14%</span>
+                            </div>
+                            <img src="/images/IconBox3.svg" alt="" width="40" height="50">
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card statsText boxDesign1 flex-row justify-content-between align-items-center">
+                            <div>
+                                <span class="boxText1">Total Sales</span>
+                                <br>
+                                <strong class="boxTextP2">$173,000</strong>
+                                <span class="text-success fw-bold small">-14%</span>
+                            </div>
+                            <img src="/images/IconBox4.svg" alt="" width="40" height="50">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -----------------Sales Overview Part --------------------- -->
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="card salesCard boxDesign1 h-100">
+                            <strong class="boxTextP2">Sales overview</strong>
+                            <p class="boxText1"><span class="text-success fw-bold small">(+5)</span> in 2021</p> <!-- used to strong since to make it bolder-->
+                            <img src="images/Graph.svg" class="img-fluid w-100" alt="Sales data from January to Febuary recorded in the year 2021.">
+                        </div>
+                    </div>
+
+                    <!-- -----------------Active Users Part --------------------- -->
+                    <div class="col-12 col-md-6">
+                        <div class="card salesCard boxDesign1 h-100">
+                            <img src="images/ActiveUsersGraph.svg" class="img-fluid ActiveUGraph" alt="Graph showcasing current active users.">
+                            <strong class="boxTextP2">Active Users</strong>
+                            <p class="boxText1"><span class="text-success fw-bold small">(+23)</span> than last week</p>
+
+                            <!------Statistsics underneath Active Users ---------->
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <span class="boxText1 fw-bold d-flex align-items-center gap-0.5"> 
+                                        <img src="/images/IconBox1.svg" alt="" width="30" height="40"> <!--REMINDER ADD ALT DESCIRPTION-->
+                                        Users
+                                    </span>
+                                    <strong class="boxTextP2 d-block">32,984</strong> <!--d-block = display=block, allowing the number to start on a seperate assigned line-->
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <span class="boxText1 fw-bold d-flex align-items-center gap-0.5">
+                                       <img src="/images/AUsersBox1.svg" alt="" width="35" height="40"> <!--REMINDER ADD ALT DESCIRPTION-->
+                                        Clicks
+                                    </span>
+                                    <strong class="boxTextP2 d-block">2,42m</strong>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <span class="boxText1 fw-bold d-flex align-items-center gap-0.5">
+                                        <img src="/images/IconBox4.svg" alt="" width="35" height="40"> <!--REMINDER ADD ALT DESCIRPTION-->
+                                        Sales
+                                    </span>
+                                    <strong class="boxTextP2 d-block">2,400$</strong>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <span class="boxText1 fw-bold d-flex align-items-center gap-0.5">
+                                        <img src="/images/AUsersBox2.svg" alt="" width="35" height="40"> <!--REMINDER ADD ALT DESCIRPTION-->
+                                        Items
+                                    </span>
+                                    <strong class="boxTextP2 d-block">320</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -----------------Projects Part --------------------- -->
+                <div class="row mt-4">
+                    <div class="col-12 col-md-8"> <!-- reason to use 8 was since project is double the size of orders column and 8 + 4 = 12-->
+                        <div class="card boxDesign1 p-3 h-100">
+                            <h2 class="boxTextP2 fw-bold mb-1">Projects</h2>
+
+                            <p class="boxText1">
+                                <img src="/images/circle.svg" alt="" width="14" height="14">
+                                <strong>30 done</strong> this month
+                            </p>
+                            <!-- Need to 4 columns since for 1. Companies, 2. Members, 3. Budget, 4. Completion -->
+                            <table class="table">
+                                <thead> <!--tells the browser that this is the table heading starts-->
+                                    <tr class="T1"> <!-- tr creates row -->
+                                        <th scope="col">Companies</th> <!-- scpe="col" helps the screen reader identify that this is the heading of the column below -->
+                                        <th scope="col">Members</th> 
+                                        <th scope="col">Budget</th> 
+                                        <th scope="col">Completion</th> 
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="pT1"><img src="/images/Adobe_XD_CC_icon 1.svg" alt="" width="20" height="18" class="me-2">Chakra Soft UI Version</td>
+                                        <td>5 members</td>
+                                        <td class="pT1">$14,000</td>
+                                        <td class="pT4">
+                                            60%
+                                            <div class="progress" aria-hidden="true">
+                                                <div class="progress-bar width-60"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pT1"><img src="/images/Ptrack.svg" alt="" width="20" height="18" class="me-2">Add Progress Track</td>
+                                        <td>2 members</td>
+                                        <td class="pT1">$3,000</td>
+                                        <td class="pT4">
+                                            10%
+                                            <div class="progress" aria-hidden="true">
+                                                <div class="progress-bar width-10"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pT1"><img src="/images/FixPp.svg" alt="" width="20" height="18" class="me-2">Fix Platform Errors</td>
+                                        <td>2 members</td>
+                                        <td class="pT1">Not set</td>
+                                        <td class="pT4">
+                                            100%
+                                            <div class="progress" aria-hidden="true">
+                                                <div class="progress-bar width-100"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pT1"><img src="/images/launch.svg" alt="" width="20" height="18" class="me-2">Launch our Mobile App</td>
+                                        <td>4 members</td>
+                                        <td class="pT1">$32,000</td>
+                                        <td class="pT4">
+                                            100%
+                                            <div class="progress" aria-hidden="true">
+                                                <div class="progress-bar width-100"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pT1"><img src="/images/pricingPa.svg" alt="" width="20" height="18" class="me-2">Add the New Pricing Page</td>
+                                        <td>5 members</td>
+                                        <td class="pT1">$400</td>
+                                        <td class="pT4">
+                                            25%
+                                            <div class="progress" aria-hidden="true">
+                                                <div class="progress-bar width-25"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pT1"><img src="/images/ol.svg" alt="" width="20" height="18" class="me-2">Redesign New Online Shop</td>
+                                        <td>2 members</td>
+                                        <td class="pT1">$7,600</td>
+                                        <td class="pT4">
+                                            40%
+                                            <div class="progress" aria-hidden="true">
+                                                <div class="progress-bar width-40"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- -----------------Orders overview Part --------------------- -->
+                    <div class="col-12 col-md-4"> 
+                        <div class="card h-100 overBox"> 
+                            <h2 class="oP1">Orders overview</h2>
+                            <p class="boxText1"><span class="text-success fw-bold small">+30%</span> this month</p>
+                            <ol class="orderData">
+                                <li class="oPT1">
+                                    <img src="/images/Not.svg" alt="" width="16" height="16">
+                                    <span>$2400, Design changes<small class="orderOverDate">22 DEC 7:20 PM</small></span>
+                                </li>
+                                <li class="oPT1">
+                                    <img src="/images/css3.svg" alt="" width="16" height="16">
+                                    <span>New order #4219423<small class="orderOverDate">21 DEC 11:21 PM</small></span>
+                                </li>
+                                <li class="oPT1">
+                                    <img src="/images/nCart.svg" alt="" width="16" height="16">
+                                    <span>Server Payments for April<small class="orderOverDate">21 DEC 9:28 PM</small></span>
+                                </li>
+                                <li class="oPT1">
+                                    <img src="/images/ywallet.svg" alt="" width="16" height="16">
+                                    <span>New card added for order #3210145<small class="orderOverDate">20 DEC 3:52 PM</small></span>
+                                </li>
+                                <li class="oPT1">
+                                    <img src="/images/dropbox.svg" alt="" width="16" height="16">
+                                    <span>Unlock packages for Development<small class="orderOverDate">19 DEC 11:35 PM</small></span>
+                                </li>
+                                <li class="oPT1">
+                                    <img src="/images/xddd.svg" alt="" width="16" height="16">
+                                    <span>New order #9851258<small class="orderOverDate">18 DEC 4:41 PM</small></span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            
+            </main>
+        </div>
+    </div>
+</body>
+</html>
